@@ -13,7 +13,7 @@ export const CompareButton = ({ bothOutputs, setBothOutputs }: CompareButtonProp
           : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
       }`}
     >
-      Compare Both
+      Compare all
     </button>
   </div>
 );

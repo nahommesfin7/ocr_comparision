@@ -10,6 +10,7 @@ import { ImageUploader } from './components/ImageUploader';
 import ImagePreview  from './components/ImagePreview';
 import LoadingSpinner from './components/LoadingSpinner';
 import ResultsDisplay from './components/ResultsDisplay';
+import { createWorker } from 'tesseract.js';
 
 
 
@@ -18,7 +19,7 @@ export default function OCRWithPreprocessing() {
   const [image, setImage] = useState<string | null>(null);
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
-  const [ocrEngine, setOcrEngine] = useState<'mistral' | 'tesseract' | 'gemini-2.5' | 'gemini-1.5'>('mistral');
+  const [ocrEngine, setOcrEngine] = useState<'mistral' | 'tesseract' | 'gemini-2.5' | 'gemini-1.5'>('tesseract');
   const [bothOutputs, setBothOutputs] = useState(false);
   const [tesseractText, setTesseractText] = useState('');
   const [mistralText, setMistralText] = useState('');
